@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url(program.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+.container{
+    padding: 10 px ;
+    color: white;
+    position: absolute;
+    border-radius: 5px;
+    top: 26%;
+    left: 36%;
+    width: 435px;
+    height: 270px;
+    overflow: hidden;
+}
+
+.container::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 360px;
+    height: 250px;
+    background:linear-gradient(0deg,transparent,#45f3ff,#45f3ff,#45f3ff);
+    transform-origin:bottom right;
+    animation: animate 6s linear infinite;
+}
+
+.container::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 360px;
+    height: 250px;
+    background:linear-gradient(0deg,transparent,#45f3ff,#45f3ff,#45f3ff);
+    transform-origin:bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+
+@keyframes animate {
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+    
+}
+.form{
+    position: absolute;
+    background-color: rgb(32, 27, 27);
+    inset: 2px;
+    z-index: 10;
+}
+
+.container h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    width: 90%;
+    border-bottom: 5px solid cyan;
+    margin-bottom: 45 px;
+    padding: 10px 0px;
+    text-align: center;
+
+}
+.box{
+    width: 100%;
+    margin: 12px 0px;
+    border-bottom: 3px solid cyan;
+}
+.box input{
+    background: none;
+    color:white;
+    width: 85%;
+    padding: 5px 0px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+}
+
+.box i{
+    width: 25px;
+    text-align: center;
+    padding: 0px 3px;
+}
+.forgot{
+    font-family: 'Playfair Display', serif;
+    margin-left: 270px;
+    cursor: pointer;
+}
+.button{
+    cursor: pointer;
+    outline: none;
+    margin: 0px 20px;
+    padding: 6px 9px;
+    border-radius: 10px; 
+    border:2px solid cyan ;
+    font-size: 17px;
+    background: black;
+    color: white;
+    font-weight: bold ;
+}
+.button:hover{
+    color: white;
+    background: cyan;
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan,0 0 50px cyan,
+    0 0 100px cyan,0 0 200px cyan;
+}
